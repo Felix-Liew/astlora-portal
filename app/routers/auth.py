@@ -1,6 +1,7 @@
 import os
 import re
 from urllib.parse import urlencode
+from urllib.parse import urlencode as encode_query
 
 import httpx
 from fastapi import APIRouter, Depends, HTTPException, Request, status
@@ -133,6 +134,12 @@ def steam_callback(request: Request, db: Session = Depends(get_db)):
     profile = _fetch_steam_profile(steam_id)
     user = _upsert_steam_user(db, profile)
     access_token = create_access_token({"sub": str(user.id), "steam_id": user.steam_id})
+    frontend_callback_url = os.getenv("FRONTEND_AUTH_CALLBACK_URL")
+    if frontend_callback_url:
+        query = encode_query({"token": access_token, "token_type": "bearer"})
+        separator = "&" if "?" in frontend_callback_url else "?"
+        return RedirectResponse(f"{frontend_callback_url}{separator}{query}")
+
     return Token(access_token=access_token)
 
 

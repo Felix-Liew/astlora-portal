@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Steam avatar placeholder">
+  <rect width="96" height="96" rx="8" fill="#1b2838"/>
+  <circle cx="48" cy="48" r="27" fill="#f8fbff" opacity=".16"/>
+  <path fill="#f8fbff" d="M62.8 37.1a10.9 10.9 0 1 0-10.9 10.8h.4l-8.7 6.3a8.8 8.8 0 0 0-4.8-1.4l-9.6-3.9-2.5 6.1 9.7 4a8.8 8.8 0 1 0 11.1 0l11.6-8.4a10.9 10.9 0 0 0 3.7-13.5ZM38.8 65.8a4.2 4.2 0 1 1 4.2-4.2 4.2 4.2 0 0 1-4.2 4.2Zm13.1-22.3a6.4 6.4 0 1 1 6.4-6.4 6.4 6.4 0 0 1-6.4 6.4Z"/>
+</svg>

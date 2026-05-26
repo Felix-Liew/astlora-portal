@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 .DS_Store
 astlora.db
+Web/node_modules/
+Web/.next/
+Web/out/
